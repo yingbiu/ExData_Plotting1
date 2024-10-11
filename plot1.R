@@ -7,7 +7,6 @@ dat <- read.table("data/household_power_consumption.txt",
   filter(`Date/Time` >= as.Date("2007-02-01") &
            `Date/Time` <= as.Date("2007-02-02"))
 
-
 dat<- dat |> mutate(Global_active_power=as.numeric(Global_active_power))
 
 
@@ -16,3 +15,4 @@ hist(dat$Global_active_power, col = "red", main = "Global Active Power",
      xlab = "Global Active Power(kilowatts)",
      ylab = "Frequency")
 dev.off()
+
